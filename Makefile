@@ -1,5 +1,6 @@
 CCFLAGS = cc -Wall -Wextra -Werror
-SRC = isalpha.c
+SRC = ft_isalpha.c \
+      ft_isdigit.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
