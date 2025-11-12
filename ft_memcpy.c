@@ -10,21 +10,41 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
+#include "libft.h"
+// #include <stdio.h>
+// #include <string.h>
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
+{
+	unsigned char	*sr;
+	unsigned char	*de;
+	unsigned int	i;
+
+	i = 0;
+	sr = (unsigned char *)src;
+	de = (unsigned char *)dest;
+	while (i < n)
+	{
+		de[i] = sr[i];
+		i++;
+	}
+	de[i] = '\0';
+	return (de);
+}
 
 /*
-void	*memcpy(void *dest, const void *src, size_t n)
-{
-
-}
-*/
-
 int	main(void)
 {
 	char	src[] = "ABCDE";
+	char	dest[10];
 	printf("Before : %s\n", src);
-	memcpy(src + 1, src,  4);
-	printf("After  : %s\n", src);
+	memcpy(dest, src,  0);
+	printf("After  : %s\n", dest);
 	printf("\n");
+	char	src2[] = "ABCDE";
+	char	dest2[10];
+	printf("Before : %s\n", src2);
+	ft_memcpy(dest2, src2,  0);
+	printf("After  : %s\n", dest2);
 }
+*/
