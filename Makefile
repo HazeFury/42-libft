@@ -9,7 +9,8 @@ SRC = ft_isalpha.c \
       ft_bzero.c \
       ft_memcpy.c \
       ft_strlcpy.c \
-      ft_strlcat.c
+      ft_strlcat.c \
+      ft_toupper.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
