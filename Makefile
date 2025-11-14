@@ -1,4 +1,6 @@
-CCFLAGS = cc -Wall -Wextra -Werror
+CC = cc
+CFLAGS = -Wall -Wextra -Werror
+
 SRC = ft_isalpha.c \
       ft_isdigit.c \
       ft_isalnum.c \
@@ -8,7 +10,6 @@ SRC = ft_isalpha.c \
       ft_memset.c \
       ft_bzero.c \
       ft_memcpy.c \
-      ft_memcpy.c \
       ft_memmove.c \
       ft_strlcpy.c \
       ft_strlcat.c \
@@ -16,19 +17,20 @@ SRC = ft_isalpha.c \
       ft_tolower.c \
       ft_strchr.c \
       ft_strrchr.c \
-	  ft_strncmp.c \
-	  ft_memchr.c \
-	  ft_memcmp.c
+		ft_strncmp.c \
+		ft_memchr.c \
+		ft_memcmp.c \
+		ft_strnstr.c
 
 OBJ = $(SRC:.c=.o)
 NAME = libft.a
-HEADER = libft.h
+HEADER = .
 
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
 %.o: %.c
-	$(CCFLAGS) -I$(HEADER) -o $@ -c $<
+	$(CC) $(CFLAGS) -I. -o $@ -c $<
 
 all: $(NAME)
 
@@ -40,7 +42,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all
-	clean
-	fclean
-	re
+.PHONY: all clean fclean re
