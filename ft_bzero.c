@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:39:13 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/12 17:00:10 by marberge         ###   ########lyon.fr   */
+/*   Updated: 2025/11/14 14:56:37 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,12 @@ size_t	ft_strlen(const char *s);
 
 void	ft_bzero(void *s, size_t n)
 {
-	unsigned int	i;
-	unsigned int	max_len;
+	size_t			i;
 	unsigned char	*str;
 
 	str = (unsigned char *)s;
-	max_len = ft_strlen((const char *)str) + 1;
 	i = 0;
-	if (n > max_len)
-		return ;
-	while (i < n && str[i] != '\0')
+	while (i < n)
 	{
 		str[i] = '\0';
 		i++;
