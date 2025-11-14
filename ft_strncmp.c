@@ -6,7 +6,7 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 15:23:30 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/14 16:20:52 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/14 19:12:01 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	i = 0;
 	if (n == 0)
 		return (0);
-	while (i < n - 1 && us1[i] && us1[i] != '\0' && us1[i] == us2[i])
+	while (i < n - 1 && us1[i] != '\0' && us1[i] == us2[i])
 		i++;
 	return (us1[i] - us2[i]);
 }
