@@ -35,17 +35,15 @@ void	*ft_memset(void *s, int c, size_t n)
 	return (s);
 }
 
-/*
-int	main(void)
-{
-	char	str[] = "hello world";
-	printf("Before : %s\n", str);
-	memset(str, 65, 5);
-	printf("After  : %s\n", str);
-	printf("\n");
-	char	str2[] = "hello world";
-	printf("Before : %s\n", str2);
-	ft_memset(str2, 65, 5);
-	printf("After  : %s\n", str2);
-}
-*/
+// int	main(void)
+// {
+// 	char	str[] = "";
+// 	printf("Before : %s\n", str);
+// 	memset(str, 65, 1);
+// 	printf("After  : %s\n", str);
+// 	printf("\n");
+// 	char	str2[] = "";
+// 	printf("Before : %s\n", str2);
+// 	ft_memset(str2, 65, 1);
+// 	printf("After  : %s\n", str2);
+// }
