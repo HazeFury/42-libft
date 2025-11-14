@@ -6,7 +6,7 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:21:04 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/14 14:05:42 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/14 14:23:48 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,33 +18,32 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*sr;
 	unsigned char	*de;
-	unsigned int	i;
+	size_t			i;
 
 	i = 0;
 	sr = (unsigned char *)src;
 	de = (unsigned char *)dest;
+	if (dest == src)
+		return (dest);
 	while (i < n)
 	{
 		de[i] = sr[i];
 		i++;
 	}
-	de[i] = '\0';
 	return (de);
 }
 
-/*
-int	main(void)
-{
-	char	src[] = "ABCDE";
-	char	dest[10];
-	printf("Before : %s\n", src);
-	memcpy(dest, src,  0);
-	printf("After  : %s\n", dest);
-	printf("\n");
-	char	src2[] = "ABCDE";
-	char	dest2[10];
-	printf("Before : %s\n", src2);
-	ft_memcpy(dest2, src2,  0);
-	printf("After  : %s\n", dest2);
-}
-*/
+// int	main(void)
+// {
+// 	char	src[] = "ABCDE";
+// 	char	dest[10];
+// 	printf("Before : %s\n", src);
+// 	memcpy(NULL, NULL,  NULL);
+// 	printf("After  : %s\n", dest);
+// 	printf("\n");
+// 	char	src2[] = "ABCDE";
+// 	char	dest2[10];
+// 	printf("Before : %s\n", src2);
+// 	ft_memcpy(NULL, NULL,  NULL);
+// 	printf("After  : %s\n", dest2);
+// }
