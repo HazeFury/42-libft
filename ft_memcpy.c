@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 17:21:04 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/12 19:34:35 by marberge         ###   ########lyon.fr   */
+/*   Updated: 2025/11/14 14:05:42 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		de[i] = sr[i];
 		i++;
 	}
+	de[i] = '\0';
 	return (de);
 }
 
