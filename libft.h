@@ -6,7 +6,7 @@
 /*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:11:18 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/15 13:20:16 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/16 23:16:17 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr);
+void	*ft_calloc(size_t nmemb, size_t size);
 
 #endif
