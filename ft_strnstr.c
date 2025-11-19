@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 18:12:01 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/15 00:16:38 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:39:15 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	little_len = ft_strlen(little);
 	if (little_len == 0)
 		return ((char *)big);
-	while (i + little_len <= len)
+	while (big[i] && i + little_len <= len)
 	{
 		if (ft_strncmp(little, big + i, little_len) == 0)
 			return ((char *)big + i);
