@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 23:33:56 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/19 15:43:40 by marberge         ###   ########.fr       */
+/*   Created: 2025/11/19 14:52:21 by marberge          #+#    #+#             */
+/*   Updated: 2025/11/19 15:43:57 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 // #include <stdio.h>
 
-size_t	ft_strlen(const char *s);
-
-char	*ft_strdup(const char *s)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		len;
 	char	*res;
+	int	i;
+	int	k;
 
 	i = 0;
-	len = ft_strlen(s);
-	res = malloc((len + 1) * sizeof(char));
+	res = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (res == NULL)
 		return (NULL);
-	while (i < len)
+	while (s1[i] != '\0')
 	{
-		res[i] = s[i];
+		res[i] = s1[i];
 		i++;
+	}
+	k = 0;
+	while (s2[k] != '\0')
+	{
+		res[i] = s2[k];
+		i++;
+		k++;
 	}
 	res[i] = '\0';
 	return (res);
@@ -38,10 +41,10 @@ char	*ft_strdup(const char *s)
 
 // int	main(void)
 // {
-// 	char	*test;
+// 	char	*res;
 
-// 	test = ft_strdup("hello world");
-// 	printf("result = %s\n", test);
-//  free(test);
-//  return(0;)
+// 	res = ft_strjoin("Hello ", "World Marco");
+// 	printf("%s\n", res);
+// 	free (res);
+// 	return (0);
 // }
