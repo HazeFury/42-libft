@@ -6,12 +6,12 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 15:50:57 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/19 18:45:48 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:23:40 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 size_t	ft_strlen(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);

@@ -6,12 +6,12 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 14:26:12 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/20 17:01:57 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:22:12 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 static int	ft_count_len(long n)
 {

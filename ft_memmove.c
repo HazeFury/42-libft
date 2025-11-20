@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 22:04:04 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/13 12:11:05 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:22:25 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
+// #include <string.h>
+// #include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 
