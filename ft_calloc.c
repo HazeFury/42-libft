@@ -6,12 +6,11 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/16 23:12:06 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/18 14:18:03 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/21 17:24:56 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 // #include <stdio.h>
 
 void	ft_bzero(void *s, size_t n);
@@ -21,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (size != 0 && nmemb > SIZE_MAX / size)
-		return (NULL);
+		return (malloc(0));
 	ptr = malloc(nmemb * size);
 	if (ptr == NULL)
 		return (NULL);

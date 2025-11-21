@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/13 17:42:04 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/13 19:30:00 by marberge         ###   ########lyon.fr   */
+/*   Updated: 2025/11/21 16:26:29 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ size_t	ft_strlen(const char *s);
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	unsigned int	i;
-	unsigned int	k;
-	unsigned int	len_dst;
-	unsigned int	len_src;
+	size_t	i;
+	size_t	k;
+	size_t	len_dst;
+	size_t	len_src;
 
 	len_dst = ft_strlen((const char *)dst);
 	len_src = ft_strlen(src);
