@@ -36,8 +36,11 @@ SRC = ft_isalpha.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 
+BONUS_SRC = ft_lstnew_bonus.c
 OBJ = $(SRC:.c=.o)
+BONUS_OBJ=$(BONUS_SRC:.c=.o)
 NAME = libft.a
+BONUS = .bonus
 HEADER = .
 
 $(NAME): $(OBJ)
@@ -46,14 +49,20 @@ $(NAME): $(OBJ)
 %.o: %.c
 	$(CC) $(CFLAGS) -I. -o $@ -c $<
 
+$(BONUS): $(NAME) $(BONUS_OBJ)
+	ar -rcs $(NAME) $(BONUS_OBJ)
+	touch $(BONUS)
+
+bonus: $(BONUS)
+
 all: $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	rm -rf $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(BONUS)
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re bonus
