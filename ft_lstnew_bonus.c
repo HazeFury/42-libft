@@ -6,7 +6,7 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 11:31:38 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/21 17:24:15 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/21 19:20:50 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ t_list	*ft_lstnew(void *content)
 // 	char	*s = "Hello world";
 
 // 	node = ft_lstnew(s);
-// 	printf("%p | %s |  %p\n", &node, (char *)node->content, node->next);
+// 	printf("%p | %s |  %p\n", node, (char *)node->content, node->next);
 // 	free(node);
 // 	return (0);
 // }
