@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: marberge <marberge@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:09:53 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/12 16:09:55 by marberge         ###   ########lyon.fr   */
+/*   Updated: 2025/11/22 19:34:51 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int	ft_isalpha(int c)
 }
 
 /*
-// main pour tester (a retirer pour le rendu)
 int	main(void)
 {
 	printf("%d\n", ft_isalpha(72)); // = 1

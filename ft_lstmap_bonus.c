@@ -6,7 +6,7 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 16:04:04 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/22 18:01:22 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/22 19:20:36 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,23 +22,24 @@ void		ft_lstclear(t_list **lst, void (*del)(void *));
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*save_point;
 	t_list	*tmp;
 	t_list	*result;
 	t_list	*new_node;
+	void	*new_content;
 
 	result = NULL;
-	save_point = result;
 	tmp = lst;
 	if (!tmp || !f || !del)
-		return (save_point);
+		return (NULL);
 	while (tmp)
 	{
-		new_node = ft_lstnew(f(tmp->content));
+		new_content = f(tmp->content);
+		new_node = ft_lstnew(new_content);
 		if (!new_node)
 		{
-			ft_lstclear(&save_point, del);
-			return (save_point);
+			del(new_content);
+			ft_lstclear(&result, del);
+			return (NULL);
 		}
 		ft_lstadd_back(&result, new_node);
 		tmp = tmp->next;

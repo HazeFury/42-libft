@@ -6,7 +6,7 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/19 19:06:14 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/21 16:18:02 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/22 18:43:53 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,6 +100,8 @@ char	**ft_split(char const *s, char c)
 	if (res == NULL)
 		return (NULL);
 	res = ft_sep_words(s, res, c);
+	if (!res)
+		return (NULL);
 	res[max_row] = NULL;
 	return (res);
 }
