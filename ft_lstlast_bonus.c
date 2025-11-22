@@ -6,12 +6,15 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 18:27:27 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/21 19:20:48 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/22 19:21:21 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 // #include <stdio.h>
+
+t_list		*ft_lstnew(void *content);
+void		ft_lstadd_front(t_list **lst, t_list *new);
 
 t_list	*ft_lstlast(t_list *lst)
 {

@@ -6,12 +6,12 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/21 18:09:23 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/21 19:20:51 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/22 19:33:12 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 int	ft_lstsize(t_list *lst)
 {
