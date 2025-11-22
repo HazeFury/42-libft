@@ -6,12 +6,12 @@
 /*   By: marberge <marberge@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 11:13:17 by marberge          #+#    #+#             */
-/*   Updated: 2025/11/22 12:20:39 by marberge         ###   ########.fr       */
+/*   Updated: 2025/11/22 12:23:39 by marberge         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+// #include <stdio.h>
 
 size_t	ft_strlen(const char *s);
 char	*ft_strdup(const char *s);
