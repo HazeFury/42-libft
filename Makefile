@@ -52,6 +52,8 @@ NAME = libft.a
 BONUS = .bonus
 HEADER = .
 
+all: $(NAME)
+
 $(NAME): $(OBJ)
 	ar -rcs $(NAME) $(OBJ)
 
@@ -63,8 +65,6 @@ $(BONUS): $(NAME) $(BONUS_OBJ)
 	touch $(BONUS)
 
 bonus: $(BONUS)
-
-all: $(NAME)
 
 clean:
 	rm -rf $(OBJ) $(BONUS_OBJ)
